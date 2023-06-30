@@ -252,6 +252,7 @@ color: yellow;
 .contact-list-container{
     list-style: none;
     padding: 0;
+    word-wrap: break-word;
 }
 .contact-list-container li i{
     color: hsl(97.44deg 100% 73.75%);
