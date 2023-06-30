@@ -1,0 +1,333 @@
+.custom-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+.background{
+    background-image: url(Images/background.jpg);
+   position: relative;
+}
+.watermark {
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    color: white;
+    font-size: 100px;
+    opacity: 0.4;
+    text-shadow: 5px 10px black;
+}
+.fixed{          /*  used by javascript */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 99;
+}
+.navbar-brand {
+    color: rgb(20 20 239) !important;
+    font-size: 30px !important;
+}
+.navbar-brand span{
+    color:white;
+}
+.navbar-collapse {
+    flex-direction: row-reverse;
+}
+.navbar-nav{
+    margin: 0 2%;
+    text-align: center;
+}
+.nav .nav-item .nav-link{
+    color: rgb(191 184 184);
+    text-decoration: none;
+    margin: auto;
+}
+.nav .nav-item .nav-link:hover{
+    color: rgb(247, 247, 247) !important;
+}
+.navbar-toggler-icon{
+color: white;
+}
+.intro{
+   text-align: left;
+   color: rgb(250, 250, 250);
+   padding: 10% 10%;
+}
+#name{
+    color: rgb(20 20 239);
+}
+
+#profession{
+        font-weight: 500; 
+        margin-left: 10px;   
+        position: absolute; /* position: absolute has made this span independent from other divs coz while changing the words it was changing other divs position */
+}
+/* .vertical-strike{
+    height: 100%;
+    border: 1px solid rgb(20 20 239);
+    margin: 0 2%;
+    position: relative;
+} */
+/* .vertical-strike {
+    height: 80%;
+    border: 1px solid rgb(20 20 239);
+    margin: 2% 2% 0% 0%;
+    position: relative;
+    bottom: -14%;
+} */
+
+/* .bullet::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: rgb(19, 19, 20);
+    border-radius: 50%;
+    top: 0;
+    position: absolute;
+    left: -5px;
+    top:-4px;
+    border: 2px solid rgb(20 20 239);
+}
+*/
+/* started designing for mobile first */
+.background2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;  /*  To prevent the watermarks going out of the frame causes horizontal scrolling */
+    background-color: rgb(19, 19, 59);
+    border: 2px solid rgb(19, 19, 59);
+}
+.watermark1 {
+    writing-mode: vertical-lr;
+    font-size: 90px;
+    position: absolute;
+    left: 70%;
+    top: 10%;
+    font-weight: 700;
+    opacity: 0.4;
+    color: aliceblue;
+    text-shadow: 5px 10px black;
+}
+.watermark2 {
+    writing-mode: vertical-lr;
+    font-size: 80px;
+    position: absolute;
+    left: 70%;
+    bottom: 3%;
+    font-weight: 700;
+    opacity: 0.4;
+    color: aliceblue;
+    text-shadow: 5px 10px black;
+}
+.work{
+    display: flex; flex-direction: column;
+    align-items: baseline;  /*  To perevent the whole area of .projects class to scale while hovering, however the contents inside projects class have consumed the smaller area (in max-width:900px & min-width: 530px) */
+}
+.projects {
+    padding: 10%;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+   position: relative;
+   perspective: 100px;
+   width: 80%;
+   box-shadow: 0px 2px 30px black;
+}
+.box img{
+    width: 100%;
+}
+.caption {
+    display: block;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10%;
+    background-color: #00000082;
+}
+.caption:hover{
+    color: rgb(252, 252, 252);
+}
+.box:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.25);
+}
+
+@keyframes lights {
+    0% {
+      text-shadow: 5px 10px 5px rgb(248, 247, 248);
+       
+    }
+    
+    30% { 
+      text-shadow: 5px 10px 5px purple;
+       
+    }
+    
+    40% { 
+      text-shadow: 5px 10px 5px rgb(56, 2, 56);
+    }
+    
+    70% {
+      text-shadow: 5px 10px 5px rgb(187, 39, 187);
+    }
+    
+    100% {
+      text-shadow: 5px 10px 5px rgb(250, 245, 250);
+    }
+    
+  }
+  
+.animation {
+    animation: lights 5s 1050ms linear infinite;
+    font-size: 35px;
+    font-family: emoji;
+}
+/* .box:focus ~ .box{
+    transform: rotateY(-25deg);
+    border: 2px solid red;
+} */
+.background3{
+    color: white;
+}
+@media screen and (max-width: 370px) and (min-width: 270px){
+    #heading2 span{
+        display: block;
+        }
+        #profession{
+            margin: 0px
+        }
+    .watermark1{
+        left: 73%;
+        font-size: 60px;
+    }
+    .watermark2{
+        left: 75%;
+        font-size: 50px;
+    }
+    .watermark {
+        font-size: 60px;
+        top: 40%;
+        right: 14%;
+    }
+}
+.background3{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(19, 19, 59);
+}
+.blue{
+    color: blue;
+}
+.yellow{
+color: yellow;
+}
+.white{
+    color: white;
+}
+.grey{
+    color: grey;
+}
+.red{
+    color: red;
+}
+.background4{
+    color: white;
+    background-color:rgb(19, 19, 59) ;
+}
+.contacts{
+    border: 2px solid white;
+}
+.contact-list-container{
+    list-style: none;
+    padding: 0;
+}
+.contact-list-container li i{
+    color: hsl(97.44deg 100% 73.75%);
+}
+.contact-list-container li a{
+    color: white;
+    text-decoration: none;
+    color: hsl(97.44deg 100% 73.75%);
+}
+.get-in-touch-btn{
+    background-color: hsl(237.46deg 56.74% 58.48%) !important;
+    color: white !important;
+    max-width: 50%;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 530px) and (min-width: 370px){
+    .watermark1{
+        left: 73%;
+    }
+    .watermark2{
+        left: 75%;
+    }
+    #heading2 span{
+        display: block;
+        }
+        #profession{
+            margin: 0px
+        }
+        .watermark {
+            font-size: 80px;
+            top: 40%;
+            right: 14%;
+        }
+}
+@media screen and (min-width: 530px) and (min-height: 410px){
+    .scroll-button span {
+        font-size: 13px;
+        bottom: 2%;
+    }
+    .watermark{
+    top: auto;
+    bottom:0%;
+    right:10%;
+    }
+
+    .work{
+        margin: 10% 0;
+        flex-direction: row;
+        perspective: 500px;
+        transform-style: preserve-3d;
+    }
+    .projects{
+        padding: 0;
+        transform-style: preserve-3d;
+    }
+    .work:hover .projects{
+        transform: rotateY(25deg); 
+    }
+    .work .projects:hover{
+        transition: 0.5s;
+        transform: rotateY(0deg) scale(1.25); 
+    }
+    .work .box:hover {
+        transform: none;
+        box-shadow: 10px 10px 20px rgba(19, 17, 17, 0.5);
+    } 
+    .watermark1{
+        writing-mode: horizontal-tb;
+        left: 35%;
+        top: 70%;
+        font-size: 150px;
+    }
+    .watermark2{
+       opacity: 0;
+    }
+}
+
+
